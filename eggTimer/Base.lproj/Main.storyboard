@@ -1,24 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eggTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QOy-iE-F7P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="899"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGG TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zm-jS-rBJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uyo-m0-kfh">
+                                        <rect key="frame" x="0.0" y="180" width="414" height="179.5"/>
+                                    </progressView>
+                                    <view contentMode="scaleToFill" id="5c1-mx-n3d" userLabel="Medium Boil">
+                                        <rect key="frame" x="0.0" y="359.5" width="414" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hard" translatesAutoresizingMaskIntoConstraints="NO" id="8G8-nI-Dex">
+                                                <rect key="frame" x="0.0" y="-0.5" width="414" height="149.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHU-he-lZ8">
+                                                <rect key="frame" x="150" y="0.0" width="110" height="149"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Hard"/>
+                                                <connections>
+                                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXd-y9-mic"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="JJ8-K6-xm2"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="OQm-7w-Typ" userLabel="Medium Boil">
+                                        <rect key="frame" x="0.0" y="539.5" width="414" height="179.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medium_egg" translatesAutoresizingMaskIntoConstraints="NO" id="nag-NH-cRc">
+                                                <rect key="frame" x="0.0" y="-0.5" width="414" height="149.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAY-63-vPi">
+                                                <rect key="frame" x="147" y="0.0" width="121" height="149"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Medium"/>
+                                                <connections>
+                                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIG-AO-ofx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="IdP-GB-kJq"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="xTd-6D-1Fi" userLabel="Soft Boil">
+                                        <rect key="frame" x="0.0" y="719" width="414" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="soft_egg" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-Z8-ecj">
+                                                <rect key="frame" x="0.0" y="-0.5" width="414" height="149.5"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbD-r4-12U">
+                                                <rect key="frame" x="144" y="0.0" width="124" height="138"/>
+                                                <state key="normal" title="Soft"/>
+                                                <connections>
+                                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twl-Al-a67"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="cuG-p5-ucD"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6QJ-Z8-ecj" firstAttribute="leading" secondItem="xTd-6D-1Fi" secondAttribute="leading" id="3BJ-sA-mhi"/>
+                                            <constraint firstItem="cuG-p5-ucD" firstAttribute="bottom" secondItem="hbD-r4-12U" secondAttribute="bottom" constant="17" id="Fvm-VY-Nmd"/>
+                                            <constraint firstItem="6QJ-Z8-ecj" firstAttribute="top" secondItem="xTd-6D-1Fi" secondAttribute="top" constant="-0.5" id="OtU-70-fGR"/>
+                                            <constraint firstItem="hbD-r4-12U" firstAttribute="centerX" secondItem="xTd-6D-1Fi" secondAttribute="centerX" id="kzy-Sd-Qey"/>
+                                            <constraint firstItem="hbD-r4-12U" firstAttribute="centerX" secondItem="6QJ-Z8-ecj" secondAttribute="centerX" id="p1V-jc-eHd"/>
+                                            <constraint firstItem="hbD-r4-12U" firstAttribute="top" secondItem="cuG-p5-ucD" secondAttribute="top" constant="69" id="rtS-yi-iFg"/>
+                                            <constraint firstItem="6QJ-Z8-ecj" firstAttribute="centerY" secondItem="xTd-6D-1Fi" secondAttribute="centerY" id="ub4-TL-tIY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QOy-iE-F7P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7YC-Xm-mWL"/>
+                            <constraint firstItem="QOy-iE-F7P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jlp-5n-FNE"/>
+                            <constraint firstItem="QOy-iE-F7P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pbr-3U-KcT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="9Zm-jS-rBJ" id="xqR-66-rLP"/>
+                        <outlet property="progressLabel" destination="Uyo-m0-kfh" id="rIv-ca-zLj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hard" width="287" height="366"/>
+        <image name="medium_egg" width="288" height="363"/>
+        <image name="soft_egg" width="287" height="365"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
