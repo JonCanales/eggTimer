@@ -13,6 +13,7 @@
 		A176BEDE25D597E5000881A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176BEDC25D597E5000881A4 /* Main.storyboard */; };
 		A176BEE025D597E6000881A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A176BEDF25D597E6000881A4 /* Assets.xcassets */; };
 		A176BEE325D597E6000881A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176BEE125D597E6000881A4 /* LaunchScreen.storyboard */; };
+		A1DD3BD625F2FCCC006602C2 /* ring.wav in Resources */ = {isa = PBXBuildFile; fileRef = A1DD3BD525F2FCCC006602C2 /* ring.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A176BEDF25D597E6000881A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A176BEE225D597E6000881A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A176BEE425D597E6000881A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1DD3BD525F2FCCC006602C2 /* ring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				A176BEDA25D597E5000881A4 /* ViewController.swift */,
 				A176BEDC25D597E5000881A4 /* Main.storyboard */,
 				A176BEDF25D597E6000881A4 /* Assets.xcassets */,
+				A1DD3BD525F2FCCC006602C2 /* ring.wav */,
 				A176BEE125D597E6000881A4 /* LaunchScreen.storyboard */,
 				A176BEE425D597E6000881A4 /* Info.plist */,
 			);
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DD3BD625F2FCCC006602C2 /* ring.wav in Resources */,
 				A176BEE325D597E6000881A4 /* LaunchScreen.storyboard in Resources */,
 				A176BEE025D597E6000881A4 /* Assets.xcassets in Resources */,
 				A176BEDE25D597E5000881A4 /* Main.storyboard in Resources */,

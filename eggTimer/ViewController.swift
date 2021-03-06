@@ -7,6 +7,10 @@
 
 import UIKit
 
+import AVFoundation
+
+var player: AVAudioPlayer?
+
 class ViewController: UIViewController {
 
    //Eggtimes -> 5, 7, 14
@@ -37,12 +41,9 @@ class ViewController: UIViewController {
        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
 
-   
-        
-        
-      
 
-
+        
+    
         @objc func updateCounter() {
             //example functionality
             if startTime < totalTime {
@@ -51,7 +52,17 @@ class ViewController: UIViewController {
             }
             else {
                 outputLabel.text = "Done"
+                let path = Bundle.main.path(forResource: "ring", ofType: "wav")!
+                    let url = URL(fileURLWithPath: path)
+                do {
+                    let sound = try AVAudioPlayer(contentsOf: url)
+                    player = sound
+                    sound.play()
+                } catch {
+                    //
+                }
                 timer.invalidate()
+                
             }
         }
 
